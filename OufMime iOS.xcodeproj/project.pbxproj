@@ -14,7 +14,24 @@
 		AE0AC56527D1019D0045923A /* OufMime_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE0AC56327D1019D0045923A /* OufMime_iOS.xcdatamodeld */; };
 		AE0AC56727D1019F0045923A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE0AC56627D1019F0045923A /* Assets.xcassets */; };
 		AE0AC56A27D1019F0045923A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0AC56827D1019F0045923A /* LaunchScreen.storyboard */; };
+		AE3888E927D20F1E005D0A4C /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3888E827D20F1E005D0A4C /* WordModel.swift */; };
+		AE3888EB27D20F4A005D0A4C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3888EA27D20F4A005D0A4C /* Category.swift */; };
+		AE3888ED27D214D5005D0A4C /* WordRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3888EC27D214D5005D0A4C /* WordRepository.swift */; };
+		AE3888FE27D24CCE005D0A4C /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3888E827D20F1E005D0A4C /* WordModel.swift */; };
+		AE3888FF27D24CDF005D0A4C /* WordRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3888EC27D214D5005D0A4C /* WordRepository.swift */; };
+		AE38890027D24CE3005D0A4C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3888EA27D20F4A005D0A4C /* Category.swift */; };
+		AE38890127D24DA2005D0A4C /* OufMime_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE0AC56327D1019D0045923A /* OufMime_iOS.xcdatamodeld */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AE3888F627D247CF005D0A4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE0AC54F27D1019D0045923A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE0AC55627D1019D0045923A;
+			remoteInfo = "OufMime iOS";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AE0AC55727D1019D0045923A /* OufMime iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OufMime iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,10 +43,21 @@
 		AE0AC56627D1019F0045923A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE0AC56927D1019F0045923A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE0AC56B27D1019F0045923A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE3888E827D20F1E005D0A4C /* WordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
+		AE3888EA27D20F4A005D0A4C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		AE3888EC27D214D5005D0A4C /* WordRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordRepository.swift; sourceTree = "<group>"; };
+		AE3888F227D247CF005D0A4C /* OufMime iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OufMime iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AE0AC55427D1019D0045923A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE3888EF27D247CF005D0A4C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -51,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				AE0AC55727D1019D0045923A /* OufMime iOS.app */,
+				AE3888F227D247CF005D0A4C /* OufMime iOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,9 +87,11 @@
 		AE0AC55927D1019D0045923A /* OufMime iOS */ = {
 			isa = PBXGroup;
 			children = (
+				AE3888E527D20647005D0A4C /* Controllers */,
+				AE3888E427D20642005D0A4C /* Views */,
+				AE3888E327D20635005D0A4C /* Model */,
 				AE0AC55A27D1019D0045923A /* AppDelegate.swift */,
 				AE0AC55C27D1019D0045923A /* SceneDelegate.swift */,
-				AE0AC55E27D1019D0045923A /* ViewController.swift */,
 				AE0AC56027D1019D0045923A /* Main.storyboard */,
 				AE0AC56627D1019F0045923A /* Assets.xcassets */,
 				AE0AC56827D1019F0045923A /* LaunchScreen.storyboard */,
@@ -68,6 +99,31 @@
 				AE0AC56327D1019D0045923A /* OufMime_iOS.xcdatamodeld */,
 			);
 			path = "OufMime iOS";
+			sourceTree = "<group>";
+		};
+		AE3888E327D20635005D0A4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AE3888E827D20F1E005D0A4C /* WordModel.swift */,
+				AE3888EA27D20F4A005D0A4C /* Category.swift */,
+				AE3888EC27D214D5005D0A4C /* WordRepository.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AE3888E427D20642005D0A4C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AE3888E527D20647005D0A4C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AE0AC55E27D1019D0045923A /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +146,24 @@
 			productReference = AE0AC55727D1019D0045923A /* OufMime iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AE3888F127D247CF005D0A4C /* OufMime iOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE3888F827D247CF005D0A4C /* Build configuration list for PBXNativeTarget "OufMime iOS Tests" */;
+			buildPhases = (
+				AE3888EE27D247CF005D0A4C /* Sources */,
+				AE3888EF27D247CF005D0A4C /* Frameworks */,
+				AE3888F027D247CF005D0A4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE3888F727D247CF005D0A4C /* PBXTargetDependency */,
+			);
+			name = "OufMime iOS Tests";
+			productName = "OufMime iOS Tests";
+			productReference = AE3888F227D247CF005D0A4C /* OufMime iOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -102,6 +176,10 @@
 				TargetAttributes = {
 					AE0AC55627D1019D0045923A = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					AE3888F127D247CF005D0A4C = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = AE0AC55627D1019D0045923A;
 					};
 				};
 			};
@@ -119,6 +197,7 @@
 			projectRoot = "";
 			targets = (
 				AE0AC55627D1019D0045923A /* OufMime iOS */,
+				AE3888F127D247CF005D0A4C /* OufMime iOS Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -134,6 +213,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AE3888F027D247CF005D0A4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -142,13 +228,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE0AC56527D1019D0045923A /* OufMime_iOS.xcdatamodeld in Sources */,
+				AE3888E927D20F1E005D0A4C /* WordModel.swift in Sources */,
 				AE0AC55F27D1019D0045923A /* ViewController.swift in Sources */,
 				AE0AC55B27D1019D0045923A /* AppDelegate.swift in Sources */,
 				AE0AC55D27D1019D0045923A /* SceneDelegate.swift in Sources */,
+				AE3888ED27D214D5005D0A4C /* WordRepository.swift in Sources */,
+				AE3888EB27D20F4A005D0A4C /* Category.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE3888EE27D247CF005D0A4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE38890027D24CE3005D0A4C /* Category.swift in Sources */,
+				AE38890127D24DA2005D0A4C /* OufMime_iOS.xcdatamodeld in Sources */,
+				AE3888FE27D24CCE005D0A4C /* WordModel.swift in Sources */,
+				AE3888FF27D24CDF005D0A4C /* WordRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AE3888F727D247CF005D0A4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE0AC55627D1019D0045923A /* OufMime iOS */;
+			targetProxy = AE3888F627D247CF005D0A4C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AE0AC56027D1019D0045923A /* Main.storyboard */ = {
@@ -342,6 +450,42 @@
 			};
 			name = Release;
 		};
+		AE3888F927D247CF005D0A4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 74PA8C23CB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.ouftech.OufMime-iOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OufMime iOS.app/OufMime iOS";
+			};
+			name = Debug;
+		};
+		AE3888FA27D247CF005D0A4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 74PA8C23CB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.ouftech.OufMime-iOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OufMime iOS.app/OufMime iOS";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -359,6 +503,15 @@
 			buildConfigurations = (
 				AE0AC56F27D1019F0045923A /* Debug */,
 				AE0AC57027D1019F0045923A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE3888F827D247CF005D0A4C /* Build configuration list for PBXNativeTarget "OufMime iOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE3888F927D247CF005D0A4C /* Debug */,
+				AE3888FA27D247CF005D0A4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
