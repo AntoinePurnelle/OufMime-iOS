@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		AE0AC55B27D1019D0045923A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0AC55A27D1019D0045923A /* AppDelegate.swift */; };
 		AE0AC55D27D1019D0045923A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0AC55C27D1019D0045923A /* SceneDelegate.swift */; };
-		AE0AC55F27D1019D0045923A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0AC55E27D1019D0045923A /* ViewController.swift */; };
+		AE0AC55F27D1019D0045923A /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0AC55E27D1019D0045923A /* WelcomeVC.swift */; };
 		AE0AC56227D1019D0045923A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0AC56027D1019D0045923A /* Main.storyboard */; };
 		AE0AC56527D1019D0045923A /* OufMime_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE0AC56327D1019D0045923A /* OufMime_iOS.xcdatamodeld */; };
 		AE0AC56727D1019F0045923A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE0AC56627D1019F0045923A /* Assets.xcassets */; };
@@ -21,6 +21,11 @@
 		AE3888FF27D24CDF005D0A4C /* WordRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3888EC27D214D5005D0A4C /* WordRepository.swift */; };
 		AE38890027D24CE3005D0A4C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3888EA27D20F4A005D0A4C /* Category.swift */; };
 		AE38890127D24DA2005D0A4C /* OufMime_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE0AC56327D1019D0045923A /* OufMime_iOS.xcdatamodeld */; };
+		AE38890327D251F7005D0A4C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE38890227D251F7005D0A4C /* Coordinator.swift */; };
+		AE38890527D25235005D0A4C /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE38890427D25235005D0A4C /* MainCoordinator.swift */; };
+		AE38890727D25284005D0A4C /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE38890627D25284005D0A4C /* Storyboarded.swift */; };
+		AEEBC00D27D2562300270102 /* SizedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEBC00C27D2562300270102 /* SizedButton.swift */; };
+		AEEBC00F27D25A5C00270102 /* TurnStartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEBC00E27D25A5C00270102 /* TurnStartVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +42,7 @@
 		AE0AC55727D1019D0045923A /* OufMime iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OufMime iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE0AC55A27D1019D0045923A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE0AC55C27D1019D0045923A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AE0AC55E27D1019D0045923A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AE0AC55E27D1019D0045923A /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		AE0AC56127D1019D0045923A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE0AC56427D1019D0045923A /* OufMime_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OufMime_iOS.xcdatamodel; sourceTree = "<group>"; };
 		AE0AC56627D1019F0045923A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,6 +52,11 @@
 		AE3888EA27D20F4A005D0A4C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		AE3888EC27D214D5005D0A4C /* WordRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordRepository.swift; sourceTree = "<group>"; };
 		AE3888F227D247CF005D0A4C /* OufMime iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OufMime iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE38890227D251F7005D0A4C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		AE38890427D25235005D0A4C /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		AE38890627D25284005D0A4C /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		AEEBC00C27D2562300270102 /* SizedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizedButton.swift; sourceTree = "<group>"; };
+		AEEBC00E27D25A5C00270102 /* TurnStartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnStartVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +124,7 @@
 		AE3888E427D20642005D0A4C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AEEBC00C27D2562300270102 /* SizedButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -121,7 +132,11 @@
 		AE3888E527D20647005D0A4C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AE0AC55E27D1019D0045923A /* ViewController.swift */,
+				AE0AC55E27D1019D0045923A /* WelcomeVC.swift */,
+				AE38890227D251F7005D0A4C /* Coordinator.swift */,
+				AE38890427D25235005D0A4C /* MainCoordinator.swift */,
+				AE38890627D25284005D0A4C /* Storyboarded.swift */,
+				AEEBC00E27D25A5C00270102 /* TurnStartVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -227,12 +242,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEEBC00F27D25A5C00270102 /* TurnStartVC.swift in Sources */,
+				AE38890327D251F7005D0A4C /* Coordinator.swift in Sources */,
 				AE0AC56527D1019D0045923A /* OufMime_iOS.xcdatamodeld in Sources */,
 				AE3888E927D20F1E005D0A4C /* WordModel.swift in Sources */,
-				AE0AC55F27D1019D0045923A /* ViewController.swift in Sources */,
+				AE0AC55F27D1019D0045923A /* WelcomeVC.swift in Sources */,
 				AE0AC55B27D1019D0045923A /* AppDelegate.swift in Sources */,
 				AE0AC55D27D1019D0045923A /* SceneDelegate.swift in Sources */,
+				AEEBC00D27D2562300270102 /* SizedButton.swift in Sources */,
 				AE3888ED27D214D5005D0A4C /* WordRepository.swift in Sources */,
+				AE38890727D25284005D0A4C /* Storyboarded.swift in Sources */,
+				AE38890527D25235005D0A4C /* MainCoordinator.swift in Sources */,
 				AE3888EB27D20F4A005D0A4C /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
