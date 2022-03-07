@@ -9,6 +9,7 @@ import UIKit
 
 class WelcomeVC: UIViewController, Storyboarded {
     weak var coordinator: MainCoordinator?
+    var viewModel: WordsViewModel = WordsViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
