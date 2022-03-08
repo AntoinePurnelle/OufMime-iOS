@@ -1,0 +1,12 @@
+{
+  "data" : [
+    {
+      "filename" : "word_wrong.wav",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

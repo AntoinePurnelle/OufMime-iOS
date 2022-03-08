@@ -25,12 +25,12 @@ struct WordsViewModel {
 
     private var wordsToPlay = [Word]()
     private var wordsMissedInRound = [Word]()
-    private var wordsPlayedInTurn: [(String, Bool)] = []
+    private var wordsPlayedInTurn: [(Word, Bool)] = []
 
-    private var currentWord: Word? = nil
+    public private(set) var currentWord: Word? = nil
 
-    private var timerTotalTime = 40
-    private var timerCurrentTime = 40
+    var timerTotalTime: Double = 6
+    var timerCurrentTime: Double = 6
     private var wordsCount = 10
     private var categories = Dictionary(uniqueKeysWithValues: Category.allCases.map { ($0.rawValue, true) })
     private var selectedCategories: [String] {
@@ -85,6 +85,18 @@ struct WordsViewModel {
         timerCurrentTime = timerTotalTime
     }
 
+    mutating func playWord(wasFound: Bool, timerEnded: Bool) {
+        if hasMoreWords {
+            wordsPlayedInTurn.append((wordsToPlay.removeFirst(), wasFound))
+
+            debugPrint("Played word \(wordsPlayedInTurn.last!)")
+
+            if !timerEnded {
+                currentWord = wordsToPlay.first
+            }
+        }
+    }
+
     func getScore(inRound round: Int, forTeam team: Int) -> Int {
         return teamWords[team][round].count
     }
@@ -97,6 +109,62 @@ struct WordsViewModel {
         return teamWords[team].reduce(0) { count, words in
             count + words.count
         }
+    }
+
+    var wordsFoundInTurnCount: Int {
+        get { wordsPlayedInTurn.filter { (_, found) in found }.count }
+    }
+
+    var wordsMissedInTurnCount: Int {
+        get { wordsPlayedInTurn.filter { (_, found) in !found }.count }
+    }
+
+    var hasMoreWords: Bool {
+        get { wordsToPlay.count > 0 }
+    }
+
+    var shouldInvertColors: Bool {
+        get { currentTeam == 0 }
+    }
+
+    var currentTeamName: String {
+        get { currentTeam == 0 ? "LES BLEUS" : "LES ORANGES" }
+    }
+
+    func getColor(forteam team: Int) -> UIColor {
+        switch (team) {
+        case 0: return #colorLiteral(red: 0, green: 0, blue: 0.3882352941, alpha: 1)
+        case 1: return #colorLiteral(red: 1, green: 0.4352941176, blue: 0, alpha: 1)
+        default: return UIColor.white
+        }
+    }
+    
+    func getTransparentColor(forteam team: Int) -> UIColor {
+        switch (team) {
+        case 0: return #colorLiteral(red: 0, green: 0, blue: 0.3882352941, alpha: 0.67)
+        case 1: return #colorLiteral(red: 1, green: 0.4352941176, blue: 0, alpha: 0.67)
+        default: return UIColor.white
+        }
+    }
+
+    var primaryColor: UIColor {
+        get { getColor(forteam: currentTeam) }
+    }
+
+    var secondaryColor: UIColor {
+        get { getColor(forteam: currentTeam == 0 ? 1 : 0) }
+    }
+    
+    var primaryTransparentColor: UIColor {
+        get { getTransparentColor(forteam: currentTeam) }
+    }
+
+    var secondaryTransparentColor: UIColor {
+        get { getTransparentColor(forteam: currentTeam == 0 ? 1 : 0) }
+    }
+
+    var appIconName: String {
+        get { shouldInvertColors ? "ic_launcher_inverted" : "ic_launcher" }
     }
 }
 

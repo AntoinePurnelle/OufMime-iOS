@@ -17,15 +17,26 @@ class TurnStartVC: UIViewController, Storyboarded {
     @IBOutlet weak var roundNumberLbl: UILabel!
     @IBOutlet weak var roundNameLbl: UILabel!
     @IBOutlet weak var playBtn: SizedButton!
-
-
+    @IBOutlet weak var appIcon: UIImageView!
+    @IBOutlet weak var scoreboardView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true;
 
+        initColors()
         updateViews()
     }
-    
+
+    private func initColors() {
+        if let vm = coordinator?.viewModel {
+            view.backgroundColor = vm.primaryColor
+            playBtn.backgroundColor = vm.secondaryColor
+
+            appIcon.image = UIImage(named: vm.appIconName)
+        }
+    }
+
     private func updateViews() {
         if let vm = coordinator?.viewModel {
             blueTotalScoreLbl.text = String(vm.getTotalScore(forTeam: 0))
@@ -35,7 +46,7 @@ class TurnStartVC: UIViewController, Storyboarded {
 
             let round = vm.currentRound
             roundNumberLbl.text = "Manche \(round + 1) :"
-            
+
             switch (round) {
             case 0:
                 roundNameLbl.text = "Décrire !"
@@ -44,8 +55,8 @@ class TurnStartVC: UIViewController, Storyboarded {
             default:
                 roundNameLbl.text = "Mimer !"
             }
-            
-            playBtn.titleLabel?.text = vm.currentTeam == 0 ? "LES BLEUS, JOUEZ !" : "LES ORANGES, JOUEZ !"
+
+            playBtn.titleLabel?.text = "\(vm.currentTeamName), JOUEZ !"
         }
     }
 
