@@ -242,6 +242,21 @@
             </objects>
             <point key="canvasLocation" x="911.59420289855075" y="138.61607142857142"/>
         </scene>
+        <!--PlayVC-->
+        <scene sceneID="WSt-vt-gm5">
+            <objects>
+                <viewController storyboardIdentifier="PlayVC" id="2al-tk-0xu" customClass="PlayVC" customModule="OufMime_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gEh-PY-EB8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="iH4-9T-SAh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ke8-Ry-tWd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1701" y="139"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="ENo-P4-nKb">

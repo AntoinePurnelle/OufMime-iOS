@@ -10,6 +10,13 @@ import UIKit
 protocol Coordinator {
     var childCoordinators: [Coordinator] { get set }
     var navigationController: UINavigationController { get set }
+    var viewModel: WordsViewModel { get }
 
     func start()
+    
+    func startGame()
+    
+    func startRound()
+    
+    func startTurn()
 }

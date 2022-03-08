@@ -8,19 +8,19 @@
 import UIKit
 
 class WelcomeVC: UIViewController, Storyboarded {
-    weak var coordinator: MainCoordinator?
-    var viewModel: WordsViewModel = WordsViewModel()
-
+    var coordinator: MainCoordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     @IBAction func playPressed(_ sender: Any) {
-        coordinator?.startRound()
+        coordinator?.startGame()
     }
     
     
     @IBAction func settingsPressed(_ sender: Any) {
     }
+    
 }
 

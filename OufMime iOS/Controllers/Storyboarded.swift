@@ -8,6 +8,7 @@
 import UIKit
 
 protocol Storyboarded {
+    var coordinator: MainCoordinator? { get set }
     static func instantiate() -> Self
 }
 

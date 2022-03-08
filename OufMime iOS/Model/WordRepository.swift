@@ -14,12 +14,12 @@ typealias OnCompletedWords = (_ words: [Word]) -> Void
 typealias OnError = (_ message: String) -> Void
 
 protocol WordRepository {
-    func fetch(word: String, onCompleted: @escaping OnCompletedWord, onError: @escaping OnError)
-    func fetchAllWords(onCompleted: @escaping OnCompletedWords, onError: @escaping OnError)
-    func fetchRandomWords(inCategories categories: [String], withCount count: Int, onCompleted: @escaping OnCompletedWords, onError: @escaping OnError)
+    func fetch(word: String, onCompleted: OnCompletedWord, onError: OnError)
+    func fetchAllWords(onCompleted: OnCompletedWords, onError: OnError)
+    func fetchRandomWords(inCategories categories: [String], withCount count: Int, onCompleted: OnCompletedWords, onError: OnError)
 
-    func insert(word: Word, onCompleted: @escaping OnCompleted, onError: @escaping OnError)
-    func insert(words: [Word], onCompleted: @escaping OnCompleted, onError: @escaping OnError)
+    func insert(word: Word, onCompleted: OnCompleted, onError: OnError)
+    func insert(words: [Word], onCompleted: OnCompleted, onError: OnError)
 }
 
 struct WordRepositoryImpl: WordRepository {
@@ -38,7 +38,7 @@ struct WordRepositoryImpl: WordRepository {
         container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
     }
 
-    func fetch(word: String, onCompleted: @escaping OnCompletedWord, onError: @escaping OnError) {
+    func fetch(word: String, onCompleted: OnCompletedWord, onError: OnError) {
         let request = WordEntity.fetchRequest()
         request.fetchLimit = 1
         request.predicate = NSPredicate(format: "word = %@", word)
@@ -50,7 +50,7 @@ struct WordRepositoryImpl: WordRepository {
         }
     }
 
-    func fetchAllWords(onCompleted: @escaping OnCompletedWords, onError: @escaping OnError) {
+    func fetchAllWords(onCompleted: OnCompletedWords, onError: OnError) {
         let request = WordEntity.fetchRequest()
 
         do {
@@ -62,7 +62,7 @@ struct WordRepositoryImpl: WordRepository {
         }
     }
 
-    func fetchRandomWords(inCategories categories: [String], withCount count: Int, onCompleted: @escaping OnCompletedWords, onError: @escaping OnError) {
+    func fetchRandomWords(inCategories categories: [String], withCount count: Int, onCompleted: OnCompletedWords, onError: OnError) {
 
         let request = WordEntity.fetchRequest()
         request.predicate = NSPredicate(format: "category in %@", categories)
@@ -81,11 +81,11 @@ struct WordRepositoryImpl: WordRepository {
         }
     }
 
-    func insert(word: Word, onCompleted: @escaping OnCompleted, onError: @escaping OnError) {
+    func insert(word: Word, onCompleted: OnCompleted, onError: OnError) {
         insert(words: [word], onCompleted: onCompleted, onError: onError)
     }
 
-    func insert(words: [Word], onCompleted: @escaping OnCompleted, onError: @escaping OnError) {
+    func insert(words: [Word], onCompleted: OnCompleted, onError: OnError) {
         for word in words {
             createWordEntity(fromWord: word)
         }
