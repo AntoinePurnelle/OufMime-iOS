@@ -7,25 +7,90 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		585BB7D876DDBD795F001FCE /* Pods_OufMime_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4ED18DFB749CEFF406B70C /* Pods_OufMime_iOS.framework */; };
+		73B41BF7CFB4CBACF9DD2FFE /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = 73B41D099E4F628823D05084 /* words.json */; };
 		AE0AC55B27D1019D0045923A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0AC55A27D1019D0045923A /* AppDelegate.swift */; };
 		AE0AC55D27D1019D0045923A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0AC55C27D1019D0045923A /* SceneDelegate.swift */; };
-		AE0AC55F27D1019D0045923A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0AC55E27D1019D0045923A /* ViewController.swift */; };
+		AE0AC55F27D1019D0045923A /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0AC55E27D1019D0045923A /* WelcomeVC.swift */; };
 		AE0AC56227D1019D0045923A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0AC56027D1019D0045923A /* Main.storyboard */; };
 		AE0AC56527D1019D0045923A /* OufMime_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE0AC56327D1019D0045923A /* OufMime_iOS.xcdatamodeld */; };
 		AE0AC56727D1019F0045923A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE0AC56627D1019F0045923A /* Assets.xcassets */; };
 		AE0AC56A27D1019F0045923A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0AC56827D1019F0045923A /* LaunchScreen.storyboard */; };
+		AE10B20E27D6218C00BA9157 /* WordsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE10B20D27D6218C00BA9157 /* WordsViewModel.swift */; };
+		AE26711C27D8E68E00035EE0 /* TeamScoreboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE26711B27D8E68E00035EE0 /* TeamScoreboardView.swift */; };
+		AE3888E927D20F1E005D0A4C /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3888E827D20F1E005D0A4C /* WordModel.swift */; };
+		AE3888EB27D20F4A005D0A4C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3888EA27D20F4A005D0A4C /* Category.swift */; };
+		AE3888ED27D214D5005D0A4C /* WordRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3888EC27D214D5005D0A4C /* WordRepository.swift */; };
+		AE3888FE27D24CCE005D0A4C /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3888E827D20F1E005D0A4C /* WordModel.swift */; };
+		AE3888FF27D24CDF005D0A4C /* WordRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3888EC27D214D5005D0A4C /* WordRepository.swift */; };
+		AE38890027D24CE3005D0A4C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3888EA27D20F4A005D0A4C /* Category.swift */; };
+		AE38890127D24DA2005D0A4C /* OufMime_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE0AC56327D1019D0045923A /* OufMime_iOS.xcdatamodeld */; };
+		AE38890327D251F7005D0A4C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE38890227D251F7005D0A4C /* Coordinator.swift */; };
+		AE38890527D25235005D0A4C /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE38890427D25235005D0A4C /* MainCoordinator.swift */; };
+		AE38890727D25284005D0A4C /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE38890627D25284005D0A4C /* Storyboarded.swift */; };
+		AE479DF227D8BE1A006BBB6E /* WordPlayedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE479DF127D8BE1A006BBB6E /* WordPlayedCell.swift */; };
+		AE479DF427D8CAC4006BBB6E /* TurnEndVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE479DF327D8CAC4006BBB6E /* TurnEndVC.swift */; };
+		AE479DF627D8DC9F006BBB6E /* ScoreboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE479DF527D8DC9F006BBB6E /* ScoreboardVC.swift */; };
+		AE49A26927D799CE0049DDC4 /* word_ok.wav in Resources */ = {isa = PBXBuildFile; fileRef = AE49A26527D799CE0049DDC4 /* word_ok.wav */; };
+		AE49A26B27D799CE0049DDC4 /* word_wrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = AE49A26727D799CE0049DDC4 /* word_wrong.wav */; };
+		AE49A26C27D799CE0049DDC4 /* times_up.wav in Resources */ = {isa = PBXBuildFile; fileRef = AE49A26827D799CE0049DDC4 /* times_up.wav */; };
+		AE49A26E27D7A6A70049DDC4 /* timer_other.wav in Resources */ = {isa = PBXBuildFile; fileRef = AE49A26D27D7A6A70049DDC4 /* timer_other.wav */; };
+		AE49A27027D7A6EB0049DDC4 /* timer.wav in Resources */ = {isa = PBXBuildFile; fileRef = AE49A26F27D7A6EB0049DDC4 /* timer.wav */; };
+		AE9841CE27D7574500B2140A /* PlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9841CD27D7574500B2140A /* PlayVC.swift */; };
+		AEEBC00D27D2562300270102 /* SizedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEBC00C27D2562300270102 /* SizedButton.swift */; };
+		AEEBC00F27D25A5C00270102 /* TurnStartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEBC00E27D25A5C00270102 /* TurnStartVC.swift */; };
+		AEEBC01127D266AC00270102 /* ScoreBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEBC01027D266AC00270102 /* ScoreBoardView.swift */; };
+		C1C50AB9A74999B79F803B58 /* Pods_OufMime_iOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BF85FF4BC0B1EFFCF7F991F /* Pods_OufMime_iOS_Tests.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		AE3888F627D247CF005D0A4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE0AC54F27D1019D0045923A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE0AC55627D1019D0045923A;
+			remoteInfo = "OufMime iOS";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		095CDB5C73840C58CFA39A25 /* Pods-OufMime iOS Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OufMime iOS Tests.release.xcconfig"; path = "Target Support Files/Pods-OufMime iOS Tests/Pods-OufMime iOS Tests.release.xcconfig"; sourceTree = "<group>"; };
+		73B41D099E4F628823D05084 /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
+		8BF85FF4BC0B1EFFCF7F991F /* Pods_OufMime_iOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OufMime_iOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ADFA610DED8DE9DD0089364 /* Pods-OufMime iOS Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OufMime iOS Tests.debug.xcconfig"; path = "Target Support Files/Pods-OufMime iOS Tests/Pods-OufMime iOS Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE0AC55727D1019D0045923A /* OufMime iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OufMime iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE0AC55A27D1019D0045923A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE0AC55C27D1019D0045923A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AE0AC55E27D1019D0045923A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AE0AC55E27D1019D0045923A /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		AE0AC56127D1019D0045923A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE0AC56427D1019D0045923A /* OufMime_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OufMime_iOS.xcdatamodel; sourceTree = "<group>"; };
 		AE0AC56627D1019F0045923A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE0AC56927D1019F0045923A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE0AC56B27D1019F0045923A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE10B20D27D6218C00BA9157 /* WordsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsViewModel.swift; sourceTree = "<group>"; };
+		AE26711B27D8E68E00035EE0 /* TeamScoreboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamScoreboardView.swift; sourceTree = "<group>"; };
+		AE3888E827D20F1E005D0A4C /* WordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
+		AE3888EA27D20F4A005D0A4C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		AE3888EC27D214D5005D0A4C /* WordRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordRepository.swift; sourceTree = "<group>"; };
+		AE3888F227D247CF005D0A4C /* OufMime iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OufMime iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE38890227D251F7005D0A4C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		AE38890427D25235005D0A4C /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		AE38890627D25284005D0A4C /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		AE479DF127D8BE1A006BBB6E /* WordPlayedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordPlayedCell.swift; sourceTree = "<group>"; };
+		AE479DF327D8CAC4006BBB6E /* TurnEndVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnEndVC.swift; sourceTree = "<group>"; };
+		AE479DF527D8DC9F006BBB6E /* ScoreboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardVC.swift; sourceTree = "<group>"; };
+		AE49A26527D799CE0049DDC4 /* word_ok.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = word_ok.wav; sourceTree = "<group>"; };
+		AE49A26727D799CE0049DDC4 /* word_wrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = word_wrong.wav; sourceTree = "<group>"; };
+		AE49A26827D799CE0049DDC4 /* times_up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = times_up.wav; sourceTree = "<group>"; };
+		AE49A26D27D7A6A70049DDC4 /* timer_other.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = timer_other.wav; sourceTree = "<group>"; };
+		AE49A26F27D7A6EB0049DDC4 /* timer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = timer.wav; sourceTree = "<group>"; };
+		AE9841CD27D7574500B2140A /* PlayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVC.swift; sourceTree = "<group>"; };
+		AEEBC00C27D2562300270102 /* SizedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizedButton.swift; sourceTree = "<group>"; };
+		AEEBC00E27D25A5C00270102 /* TurnStartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnStartVC.swift; sourceTree = "<group>"; };
+		AEEBC01027D266AC00270102 /* ScoreBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardView.swift; sourceTree = "<group>"; };
+		B09B4B7F8FA52F974AD285EE /* Pods-OufMime iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OufMime iOS.release.xcconfig"; path = "Target Support Files/Pods-OufMime iOS/Pods-OufMime iOS.release.xcconfig"; sourceTree = "<group>"; };
+		BA4ED18DFB749CEFF406B70C /* Pods_OufMime_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OufMime_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F252795B83C2631EED71263D /* Pods-OufMime iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OufMime iOS.debug.xcconfig"; path = "Target Support Files/Pods-OufMime iOS/Pods-OufMime iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +98,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				585BB7D876DDBD795F001FCE /* Pods_OufMime_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE3888EF27D247CF005D0A4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1C50AB9A74999B79F803B58 /* Pods_OufMime_iOS_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83C61D126F65F82F049DFAF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA4ED18DFB749CEFF406B70C /* Pods_OufMime_iOS.framework */,
+				8BF85FF4BC0B1EFFCF7F991F /* Pods_OufMime_iOS_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A69504F5CF2C2EF837E9E8FA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F252795B83C2631EED71263D /* Pods-OufMime iOS.debug.xcconfig */,
+				B09B4B7F8FA52F974AD285EE /* Pods-OufMime iOS.release.xcconfig */,
+				9ADFA610DED8DE9DD0089364 /* Pods-OufMime iOS Tests.debug.xcconfig */,
+				095CDB5C73840C58CFA39A25 /* Pods-OufMime iOS Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AE0AC54E27D1019D0045923A = {
 			isa = PBXGroup;
 			children = (
 				AE0AC55927D1019D0045923A /* OufMime iOS */,
 				AE0AC55827D1019D0045923A /* Products */,
+				A69504F5CF2C2EF837E9E8FA /* Pods */,
+				83C61D126F65F82F049DFAF4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				AE0AC55727D1019D0045923A /* OufMime iOS.app */,
+				AE3888F227D247CF005D0A4C /* OufMime iOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,16 +155,69 @@
 		AE0AC55927D1019D0045923A /* OufMime iOS */ = {
 			isa = PBXGroup;
 			children = (
+				AE49A26427D7995A0049DDC4 /* Assets */,
+				AE3888E527D20647005D0A4C /* Controllers */,
+				AE3888E327D20635005D0A4C /* Model */,
+				AE3888E427D20642005D0A4C /* Views */,
+				AE0AC56B27D1019F0045923A /* Info.plist */,
 				AE0AC55A27D1019D0045923A /* AppDelegate.swift */,
 				AE0AC55C27D1019D0045923A /* SceneDelegate.swift */,
-				AE0AC55E27D1019D0045923A /* ViewController.swift */,
-				AE0AC56027D1019D0045923A /* Main.storyboard */,
 				AE0AC56627D1019F0045923A /* Assets.xcassets */,
 				AE0AC56827D1019F0045923A /* LaunchScreen.storyboard */,
-				AE0AC56B27D1019F0045923A /* Info.plist */,
+				AE0AC56027D1019D0045923A /* Main.storyboard */,
 				AE0AC56327D1019D0045923A /* OufMime_iOS.xcdatamodeld */,
 			);
 			path = "OufMime iOS";
+			sourceTree = "<group>";
+		};
+		AE3888E327D20635005D0A4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AE3888E827D20F1E005D0A4C /* WordModel.swift */,
+				AE3888EA27D20F4A005D0A4C /* Category.swift */,
+				AE3888EC27D214D5005D0A4C /* WordRepository.swift */,
+				AE10B20D27D6218C00BA9157 /* WordsViewModel.swift */,
+				73B41D099E4F628823D05084 /* words.json */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AE3888E427D20642005D0A4C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AEEBC01027D266AC00270102 /* ScoreBoardView.swift */,
+				AEEBC00C27D2562300270102 /* SizedButton.swift */,
+				AE479DF127D8BE1A006BBB6E /* WordPlayedCell.swift */,
+				AE26711B27D8E68E00035EE0 /* TeamScoreboardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AE3888E527D20647005D0A4C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AE38890227D251F7005D0A4C /* Coordinator.swift */,
+				AE38890427D25235005D0A4C /* MainCoordinator.swift */,
+				AE38890627D25284005D0A4C /* Storyboarded.swift */,
+				AE9841CD27D7574500B2140A /* PlayVC.swift */,
+				AE479DF327D8CAC4006BBB6E /* TurnEndVC.swift */,
+				AEEBC00E27D25A5C00270102 /* TurnStartVC.swift */,
+				AE0AC55E27D1019D0045923A /* WelcomeVC.swift */,
+				AE479DF527D8DC9F006BBB6E /* ScoreboardVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AE49A26427D7995A0049DDC4 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				AE49A26827D799CE0049DDC4 /* times_up.wav */,
+				AE49A26527D799CE0049DDC4 /* word_ok.wav */,
+				AE49A26727D799CE0049DDC4 /* word_wrong.wav */,
+				AE49A26D27D7A6A70049DDC4 /* timer_other.wav */,
+				AE49A26F27D7A6EB0049DDC4 /* timer.wav */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +227,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE0AC56E27D1019F0045923A /* Build configuration list for PBXNativeTarget "OufMime iOS" */;
 			buildPhases = (
+				2F459FE937C86746F26FF4B6 /* [CP] Check Pods Manifest.lock */,
 				AE0AC55327D1019D0045923A /* Sources */,
 				AE0AC55427D1019D0045923A /* Frameworks */,
 				AE0AC55527D1019D0045923A /* Resources */,
+				369FD5F062E70A20E8C5AA8C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -89,6 +241,25 @@
 			productName = "OufMime iOS";
 			productReference = AE0AC55727D1019D0045923A /* OufMime iOS.app */;
 			productType = "com.apple.product-type.application";
+		};
+		AE3888F127D247CF005D0A4C /* OufMime iOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE3888F827D247CF005D0A4C /* Build configuration list for PBXNativeTarget "OufMime iOS Tests" */;
+			buildPhases = (
+				EF85FDE603D6F2E5E7118954 /* [CP] Check Pods Manifest.lock */,
+				AE3888EE27D247CF005D0A4C /* Sources */,
+				AE3888EF27D247CF005D0A4C /* Frameworks */,
+				AE3888F027D247CF005D0A4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE3888F727D247CF005D0A4C /* PBXTargetDependency */,
+			);
+			name = "OufMime iOS Tests";
+			productName = "OufMime iOS Tests";
+			productReference = AE3888F227D247CF005D0A4C /* OufMime iOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -102,6 +273,10 @@
 				TargetAttributes = {
 					AE0AC55627D1019D0045923A = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					AE3888F127D247CF005D0A4C = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = AE0AC55627D1019D0045923A;
 					};
 				};
 			};
@@ -119,6 +294,7 @@
 			projectRoot = "";
 			targets = (
 				AE0AC55627D1019D0045923A /* OufMime iOS */,
+				AE3888F127D247CF005D0A4C /* OufMime iOS Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -131,24 +307,135 @@
 				AE0AC56A27D1019F0045923A /* LaunchScreen.storyboard in Resources */,
 				AE0AC56727D1019F0045923A /* Assets.xcassets in Resources */,
 				AE0AC56227D1019D0045923A /* Main.storyboard in Resources */,
+				AE49A26B27D799CE0049DDC4 /* word_wrong.wav in Resources */,
+				AE49A26927D799CE0049DDC4 /* word_ok.wav in Resources */,
+				AE49A27027D7A6EB0049DDC4 /* timer.wav in Resources */,
+				AE49A26E27D7A6A70049DDC4 /* timer_other.wav in Resources */,
+				AE49A26C27D799CE0049DDC4 /* times_up.wav in Resources */,
+				73B41BF7CFB4CBACF9DD2FFE /* words.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE3888F027D247CF005D0A4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F459FE937C86746F26FF4B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OufMime iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		369FD5F062E70A20E8C5AA8C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OufMime iOS/Pods-OufMime iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OufMime iOS/Pods-OufMime iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OufMime iOS/Pods-OufMime iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF85FDE603D6F2E5E7118954 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OufMime iOS Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AE0AC55327D1019D0045923A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE479DF627D8DC9F006BBB6E /* ScoreboardVC.swift in Sources */,
+				AE26711C27D8E68E00035EE0 /* TeamScoreboardView.swift in Sources */,
+				AEEBC00F27D25A5C00270102 /* TurnStartVC.swift in Sources */,
+				AE38890327D251F7005D0A4C /* Coordinator.swift in Sources */,
+				AE9841CE27D7574500B2140A /* PlayVC.swift in Sources */,
+				AE10B20E27D6218C00BA9157 /* WordsViewModel.swift in Sources */,
 				AE0AC56527D1019D0045923A /* OufMime_iOS.xcdatamodeld in Sources */,
-				AE0AC55F27D1019D0045923A /* ViewController.swift in Sources */,
+				AE3888E927D20F1E005D0A4C /* WordModel.swift in Sources */,
+				AE0AC55F27D1019D0045923A /* WelcomeVC.swift in Sources */,
 				AE0AC55B27D1019D0045923A /* AppDelegate.swift in Sources */,
+				AE479DF427D8CAC4006BBB6E /* TurnEndVC.swift in Sources */,
+				AEEBC01127D266AC00270102 /* ScoreBoardView.swift in Sources */,
 				AE0AC55D27D1019D0045923A /* SceneDelegate.swift in Sources */,
+				AE479DF227D8BE1A006BBB6E /* WordPlayedCell.swift in Sources */,
+				AEEBC00D27D2562300270102 /* SizedButton.swift in Sources */,
+				AE3888ED27D214D5005D0A4C /* WordRepository.swift in Sources */,
+				AE38890727D25284005D0A4C /* Storyboarded.swift in Sources */,
+				AE38890527D25235005D0A4C /* MainCoordinator.swift in Sources */,
+				AE3888EB27D20F4A005D0A4C /* Category.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE3888EE27D247CF005D0A4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE38890027D24CE3005D0A4C /* Category.swift in Sources */,
+				AE38890127D24DA2005D0A4C /* OufMime_iOS.xcdatamodeld in Sources */,
+				AE3888FE27D24CCE005D0A4C /* WordModel.swift in Sources */,
+				AE3888FF27D24CDF005D0A4C /* WordRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AE3888F727D247CF005D0A4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE0AC55627D1019D0045923A /* OufMime iOS */;
+			targetProxy = AE3888F627D247CF005D0A4C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AE0AC56027D1019D0045923A /* Main.storyboard */ = {
@@ -288,17 +575,18 @@
 		};
 		AE0AC56F27D1019F0045923A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F252795B83C2631EED71263D /* Pods-OufMime iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 74PA8C23CB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "OufMime iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -316,17 +604,18 @@
 		};
 		AE0AC57027D1019F0045923A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B09B4B7F8FA52F974AD285EE /* Pods-OufMime iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 74PA8C23CB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "OufMime iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -339,6 +628,44 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AE3888F927D247CF005D0A4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9ADFA610DED8DE9DD0089364 /* Pods-OufMime iOS Tests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 74PA8C23CB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.ouftech.OufMime-iOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OufMime iOS.app/OufMime iOS";
+			};
+			name = Debug;
+		};
+		AE3888FA27D247CF005D0A4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 095CDB5C73840C58CFA39A25 /* Pods-OufMime iOS Tests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 74PA8C23CB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.ouftech.OufMime-iOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OufMime iOS.app/OufMime iOS";
 			};
 			name = Release;
 		};
@@ -359,6 +686,15 @@
 			buildConfigurations = (
 				AE0AC56F27D1019F0045923A /* Debug */,
 				AE0AC57027D1019F0045923A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE3888F827D247CF005D0A4C /* Build configuration list for PBXNativeTarget "OufMime iOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE3888F927D247CF005D0A4C /* Debug */,
+				AE3888FA27D247CF005D0A4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
