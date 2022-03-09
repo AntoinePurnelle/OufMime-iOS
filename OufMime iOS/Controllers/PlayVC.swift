@@ -13,17 +13,20 @@ class PlayVC: UIViewController, Storyboarded {
 
     var coordinator: MainCoordinator?
     var player: AVAudioPlayer?
+    var timerPlayer: AVAudioPlayer?
+    var timer: Timer?
 
     @IBOutlet weak var timerProgressBar: KCCircularTimer!
     @IBOutlet weak var wordLbl: UILabel!
     @IBOutlet weak var categoryLbl: UILabel!
     @IBOutlet weak var foundLbl: UILabel!
     @IBOutlet weak var missedLbl: UILabel!
+    @IBOutlet weak var foundBtn: UIButton!
+    @IBOutlet weak var missedBtn: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true;
-
 
         initColors()
         updateViews()
@@ -55,7 +58,7 @@ class PlayVC: UIViewController, Storyboarded {
         timerProgressBar.currentValue = vm.timerCurrentTime
         timerProgressBar.maximumValue = vm.timerTotalTime
 
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             vm.timerCurrentTime -= 1
 
             self.timerProgressBar.currentValue = vm.timerCurrentTime
@@ -65,9 +68,9 @@ class PlayVC: UIViewController, Storyboarded {
             }
 
             if vm.timerCurrentTime == 0 {
-                timer.invalidate()
                 self.play(sound: "times_up.wav")
                 vm.playWord(wasFound: false, timerEnded: true)
+                self.endTurn()
             }
         }
     }
@@ -83,11 +86,18 @@ class PlayVC: UIViewController, Storyboarded {
     }
 
     private func playWord(found: Bool) {
-        coordinator?.viewModel.playWord(wasFound: found, timerEnded: false)
-        updateViews()
+        if let coordinator = coordinator {
+            coordinator.viewModel.playWord(wasFound: found, timerEnded: false)
+
+            if (coordinator.viewModel.hasMoreWords) {
+                updateViews()
+            } else {
+                endTurn()
+            }
+        }
     }
 
-    func play(sound soundName: String) {
+    func play(sound soundName: String, isTimerSound: Bool = false) {
         guard let path = Bundle.main.path(forResource: soundName, ofType: nil) else {
             return
         }
@@ -99,11 +109,25 @@ class PlayVC: UIViewController, Storyboarded {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
 
             try AVAudioSession.sharedInstance().setActive(true)
-
-            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.wav.rawValue)
-            player!.play()
+            
+            if (isTimerSound) {
+                timerPlayer = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.wav.rawValue)
+                timerPlayer!.play()
+            } else {
+                player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.wav.rawValue)
+                player!.play()
+            }
         } catch {
             debugPrint(error.localizedDescription)
         }
+    }
+
+    func endTurn() {
+        updateViews()
+        foundBtn.isEnabled = false
+        missedBtn.isEnabled = false
+        timer?.invalidate()
+        timerPlayer?.stop()
+        coordinator!.endTurn()
     }
 }

@@ -19,4 +19,6 @@ protocol Coordinator {
     func startRound()
     
     func startTurn()
+    
+    func endTurn()
 }

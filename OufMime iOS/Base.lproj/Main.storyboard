@@ -430,7 +430,9 @@
                     </view>
                     <connections>
                         <outlet property="categoryLbl" destination="BBz-HK-TsM" id="oZr-6Q-eL4"/>
+                        <outlet property="foundBtn" destination="nzI-DL-Bkc" id="NFe-VA-F2p"/>
                         <outlet property="foundLbl" destination="r6C-A4-c0K" id="41s-73-Rkp"/>
+                        <outlet property="missedBtn" destination="37U-23-pfV" id="yIS-TI-ghB"/>
                         <outlet property="missedLbl" destination="ZYD-7n-Z8r" id="FYY-rU-JXe"/>
                         <outlet property="timerProgressBar" destination="SHD-Nd-MmZ" id="Tql-iu-BNn"/>
                         <outlet property="wordLbl" destination="uEb-di-DWd" id="Vey-eB-JrY"/>

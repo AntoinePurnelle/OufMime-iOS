@@ -44,4 +44,8 @@ class MainCoordinator: Coordinator {
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }
+    
+    func endTurn() {
+        viewModel.finishTurn()
+    }
 }

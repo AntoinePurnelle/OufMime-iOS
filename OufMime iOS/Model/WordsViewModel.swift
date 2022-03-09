@@ -97,6 +97,18 @@ struct WordsViewModel {
         }
     }
 
+    mutating func finishTurn() {
+        let wordsFoundInTurn = wordsPlayedInTurn.filter { (word, found) in found }.map { (word, _) in word }
+        teamWords[currentTeam][currentRound].append(contentsOf: wordsFoundInTurn)
+
+        let wordsMissedInTurn = wordsPlayedInTurn.filter { (word, found) in !found }.map { (word, _) in word }
+        wordsToPlay.append(contentsOf: wordsMissedInTurn)
+        
+        currentTeam = currentTeam == 0 ? 1 : 0
+        
+        debugPrint("Turn finished and saved")
+    }
+
     func getScore(inRound round: Int, forTeam team: Int) -> Int {
         return teamWords[team][round].count
     }
@@ -138,7 +150,7 @@ struct WordsViewModel {
         default: return UIColor.white
         }
     }
-    
+
     func getTransparentColor(forteam team: Int) -> UIColor {
         switch (team) {
         case 0: return #colorLiteral(red: 0, green: 0, blue: 0.3882352941, alpha: 0.67)
@@ -154,7 +166,7 @@ struct WordsViewModel {
     var secondaryColor: UIColor {
         get { getColor(forteam: currentTeam == 0 ? 1 : 0) }
     }
-    
+
     var primaryTransparentColor: UIColor {
         get { getTransparentColor(forteam: currentTeam) }
     }
