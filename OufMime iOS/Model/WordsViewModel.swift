@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+typealias PlayedWord = (word: Word, found: Bool)
+
 struct WordsViewModel {
 
     static let instance = WordsViewModel()
@@ -25,7 +27,7 @@ struct WordsViewModel {
 
     private var wordsToPlay = [Word]()
     private var wordsMissedInRound = [Word]()
-    private var wordsPlayedInTurn: [(Word, Bool)] = []
+    public private(set) var wordsPlayedInTurn: [PlayedWord] = []
 
     public private(set) var currentWord: Word? = nil
 
@@ -107,6 +109,10 @@ struct WordsViewModel {
         currentTeam = currentTeam == 0 ? 1 : 0
         
         debugPrint("Turn finished and saved")
+    }
+    
+    mutating func changeValueInPlayedWords(atRow index: Int) {
+        wordsPlayedInTurn[index].found = !wordsPlayedInTurn[index].found
     }
 
     func getScore(inRound round: Int, forTeam team: Int) -> Int {

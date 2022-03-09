@@ -18,11 +18,9 @@ class MainCoordinator: Coordinator {
     }
 
     func start() {
-        let vc = WelcomeVC.instantiate()
-        vc.coordinator = self
-        navigationController.pushViewController(vc, animated: false)
+        navigate(to: WelcomeVC.instantiate())
     }
-    
+
     func startGame() {
         viewModel.initGame {
             self.startRound()
@@ -31,21 +29,33 @@ class MainCoordinator: Coordinator {
 
     func startRound() {
         viewModel.initRound()
-        
-        let vc = TurnStartVC.instantiate()
-        vc.coordinator = self
-        navigationController.pushViewController(vc, animated: true)
+        navigate(to: TurnStartVC.instantiate())
     }
 
     func startTurn() {
         viewModel.initTurn()
-        
-        let vc = PlayVC.instantiate()
+        navigate(to: PlayVC.instantiate())
+    }
+
+    func endTurn() {
+        navigate(to: TurnEndVC.instantiate())
+    }
+
+    func finishAndSaveTurn() {
+        viewModel.finishTurn()
+
+        if viewModel.hasMoreWords {
+            let turnStartVC = navigationController.viewControllers[1] as! TurnStartVC
+            navigationController.popToViewController(turnStartVC, animated: true)
+            turnStartVC.initColors()
+            turnStartVC.updateViews()
+        } else {
+            navigate(to: ScoreboardVC.instantiate())
+        }
+    }
+
+    private func navigate(to vc: StoryboardedVC) {
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
-    }
-    
-    func endTurn() {
-        viewModel.finishTurn()
     }
 }

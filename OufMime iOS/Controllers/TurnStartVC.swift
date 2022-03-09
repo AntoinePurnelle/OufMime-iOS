@@ -7,8 +7,7 @@
 
 import UIKit
 
-class TurnStartVC: UIViewController, Storyboarded {
-    var coordinator: MainCoordinator?
+class TurnStartVC: StoryboardedVC {
 
     @IBOutlet weak var blueTotalScoreLbl: UILabel!
     @IBOutlet weak var blueRoundScoreLbl: UILabel!
@@ -22,13 +21,10 @@ class TurnStartVC: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.hidesBackButton = true;
-
-        initColors()
         updateViews()
     }
 
-    private func initColors() {
+    override func initColors() {
         if let vm = coordinator?.viewModel {
             view.backgroundColor = vm.primaryColor
             playBtn.backgroundColor = vm.secondaryColor
@@ -37,7 +33,7 @@ class TurnStartVC: UIViewController, Storyboarded {
         }
     }
 
-    private func updateViews() {
+    func updateViews() {
         if let vm = coordinator?.viewModel {
             blueTotalScoreLbl.text = String(vm.getTotalScore(forTeam: 0))
             blueRoundScoreLbl.text = String(vm.getCurrentRoundScore(forTeam: 0))
@@ -56,7 +52,7 @@ class TurnStartVC: UIViewController, Storyboarded {
                 roundNameLbl.text = "Mimer !"
             }
 
-            playBtn.titleLabel?.text = "\(vm.currentTeamName), JOUEZ !"
+            playBtn.setTitle("\(vm.currentTeamName), JOUEZ !", for: .normal)
         }
     }
 

@@ -9,9 +9,8 @@ import UIKit
 import KCCircularTimer
 import AVFoundation
 
-class PlayVC: UIViewController, Storyboarded {
+class PlayVC: StoryboardedVC {
 
-    var coordinator: MainCoordinator?
     var player: AVAudioPlayer?
     var timerPlayer: AVAudioPlayer?
     var timer: Timer?
@@ -26,15 +25,12 @@ class PlayVC: UIViewController, Storyboarded {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.hidesBackButton = true;
-
-        initColors()
         updateViews()
         initTimer()
     }
 
 
-    private func initColors() {
+    override func initColors() {
         if let vm = coordinator?.viewModel {
             view.backgroundColor = vm.primaryColor
             timerProgressBar.tintColor = vm.secondaryColor

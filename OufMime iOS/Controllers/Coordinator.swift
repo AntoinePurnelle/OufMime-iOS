@@ -13,12 +13,4 @@ protocol Coordinator {
     var viewModel: WordsViewModel { get }
 
     func start()
-    
-    func startGame()
-    
-    func startRound()
-    
-    func startTurn()
-    
-    func endTurn()
 }

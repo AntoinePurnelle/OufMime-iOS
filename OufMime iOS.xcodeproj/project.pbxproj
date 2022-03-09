@@ -27,6 +27,9 @@
 		AE38890327D251F7005D0A4C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE38890227D251F7005D0A4C /* Coordinator.swift */; };
 		AE38890527D25235005D0A4C /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE38890427D25235005D0A4C /* MainCoordinator.swift */; };
 		AE38890727D25284005D0A4C /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE38890627D25284005D0A4C /* Storyboarded.swift */; };
+		AE479DF227D8BE1A006BBB6E /* WordPlayedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE479DF127D8BE1A006BBB6E /* WordPlayedCell.swift */; };
+		AE479DF427D8CAC4006BBB6E /* TurnEndVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE479DF327D8CAC4006BBB6E /* TurnEndVC.swift */; };
+		AE479DF627D8DC9F006BBB6E /* ScoreboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE479DF527D8DC9F006BBB6E /* ScoreboardVC.swift */; };
 		AE49A26927D799CE0049DDC4 /* word_ok.wav in Resources */ = {isa = PBXBuildFile; fileRef = AE49A26527D799CE0049DDC4 /* word_ok.wav */; };
 		AE49A26B27D799CE0049DDC4 /* word_wrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = AE49A26727D799CE0049DDC4 /* word_wrong.wav */; };
 		AE49A26C27D799CE0049DDC4 /* times_up.wav in Resources */ = {isa = PBXBuildFile; fileRef = AE49A26827D799CE0049DDC4 /* times_up.wav */; };
@@ -71,6 +74,9 @@
 		AE38890227D251F7005D0A4C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		AE38890427D25235005D0A4C /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		AE38890627D25284005D0A4C /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		AE479DF127D8BE1A006BBB6E /* WordPlayedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordPlayedCell.swift; sourceTree = "<group>"; };
+		AE479DF327D8CAC4006BBB6E /* TurnEndVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnEndVC.swift; sourceTree = "<group>"; };
+		AE479DF527D8DC9F006BBB6E /* ScoreboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardVC.swift; sourceTree = "<group>"; };
 		AE49A26527D799CE0049DDC4 /* word_ok.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = word_ok.wav; sourceTree = "<group>"; };
 		AE49A26727D799CE0049DDC4 /* word_wrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = word_wrong.wav; sourceTree = "<group>"; };
 		AE49A26827D799CE0049DDC4 /* times_up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = times_up.wav; sourceTree = "<group>"; };
@@ -179,6 +185,7 @@
 			children = (
 				AEEBC01027D266AC00270102 /* ScoreBoardView.swift */,
 				AEEBC00C27D2562300270102 /* SizedButton.swift */,
+				AE479DF127D8BE1A006BBB6E /* WordPlayedCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,12 +193,14 @@
 		AE3888E527D20647005D0A4C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AE0AC55E27D1019D0045923A /* WelcomeVC.swift */,
 				AE38890227D251F7005D0A4C /* Coordinator.swift */,
 				AE38890427D25235005D0A4C /* MainCoordinator.swift */,
 				AE38890627D25284005D0A4C /* Storyboarded.swift */,
-				AEEBC00E27D25A5C00270102 /* TurnStartVC.swift */,
 				AE9841CD27D7574500B2140A /* PlayVC.swift */,
+				AE479DF327D8CAC4006BBB6E /* TurnEndVC.swift */,
+				AEEBC00E27D25A5C00270102 /* TurnStartVC.swift */,
+				AE0AC55E27D1019D0045923A /* WelcomeVC.swift */,
+				AE479DF527D8DC9F006BBB6E /* ScoreboardVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -382,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE479DF627D8DC9F006BBB6E /* ScoreboardVC.swift in Sources */,
 				AEEBC00F27D25A5C00270102 /* TurnStartVC.swift in Sources */,
 				AE38890327D251F7005D0A4C /* Coordinator.swift in Sources */,
 				AE9841CE27D7574500B2140A /* PlayVC.swift in Sources */,
@@ -390,8 +400,10 @@
 				AE3888E927D20F1E005D0A4C /* WordModel.swift in Sources */,
 				AE0AC55F27D1019D0045923A /* WelcomeVC.swift in Sources */,
 				AE0AC55B27D1019D0045923A /* AppDelegate.swift in Sources */,
+				AE479DF427D8CAC4006BBB6E /* TurnEndVC.swift in Sources */,
 				AEEBC01127D266AC00270102 /* ScoreBoardView.swift in Sources */,
 				AE0AC55D27D1019D0045923A /* SceneDelegate.swift in Sources */,
+				AE479DF227D8BE1A006BBB6E /* WordPlayedCell.swift in Sources */,
 				AEEBC00D27D2562300270102 /* SizedButton.swift in Sources */,
 				AE3888ED27D214D5005D0A4C /* WordRepository.swift in Sources */,
 				AE38890727D25284005D0A4C /* Storyboarded.swift in Sources */,

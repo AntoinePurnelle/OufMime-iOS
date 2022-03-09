@@ -21,3 +21,17 @@ extension Storyboarded where Self: UIViewController {
         return storyboard.instantiateViewController(withIdentifier: className) as! Self
     }
 }
+
+
+class StoryboardedVC: UIViewController, Storyboarded {
+    var coordinator: MainCoordinator?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationItem.hidesBackButton = true
+        initColors()
+    }
+    
+    func initColors() {}
+    
+}
