@@ -19,12 +19,12 @@ class ScoreBoardView: UIStackView {
         super.init(coder: coder)
         initSubViews()
     }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         initSubViews()
     }
-    
+
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         initSubViews()
@@ -32,14 +32,15 @@ class ScoreBoardView: UIStackView {
 
     func initSubViews() {
         self.axis = .vertical
-        
+
         layer.cornerRadius = 8.0
         layer.borderWidth = 1.0
-        setColor(color: UIColor.orange)
-    }
-    
-    func setColor(color: UIColor) {
         layer.borderColor = tintColor.cgColor
+    }
+
+    var color: UIColor {
+        get { UIColor() }
+        set { layer.borderColor = newValue.cgColor }
     }
 
 }

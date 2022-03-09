@@ -45,13 +45,27 @@ class MainCoordinator: Coordinator {
         viewModel.finishTurn()
 
         if viewModel.hasMoreWords {
-            let turnStartVC = navigationController.viewControllers[1] as! TurnStartVC
-            navigationController.popToViewController(turnStartVC, animated: true)
-            turnStartVC.initColors()
-            turnStartVC.updateViews()
+            popToRoundStart()
         } else {
             navigate(to: ScoreboardVC.instantiate())
         }
+    }
+
+    func finishRound() {
+        if viewModel.currentRound == 2 {
+            let welcomeVC = navigationController.viewControllers[0]
+            navigationController.popToViewController(welcomeVC, animated: true)
+        } else {
+            viewModel.finishRound()
+            popToRoundStart()
+        }
+    }
+
+    func popToRoundStart() {
+        let turnStartVC = navigationController.viewControllers[1] as! TurnStartVC
+        navigationController.popToViewController(turnStartVC, animated: true)
+        turnStartVC.initColors()
+        turnStartVC.updateViews()
     }
 
     private func navigate(to vc: StoryboardedVC) {

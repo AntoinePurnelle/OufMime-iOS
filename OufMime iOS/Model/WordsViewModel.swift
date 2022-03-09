@@ -111,12 +111,17 @@ struct WordsViewModel {
         debugPrint("Turn finished and saved")
     }
     
+    mutating func finishRound() {
+        currentRound += 1
+        initRound()
+    }
+    
     mutating func changeValueInPlayedWords(atRow index: Int) {
         wordsPlayedInTurn[index].found = !wordsPlayedInTurn[index].found
     }
 
     func getScore(inRound round: Int, forTeam team: Int) -> Int {
-        return teamWords[team][round].count
+        return currentRound < round ? -1 : teamWords[team][round].count
     }
 
     func getCurrentRoundScore(forTeam team: Int) -> Int {
