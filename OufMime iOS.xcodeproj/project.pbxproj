@@ -18,6 +18,7 @@
 		AE0AC56A27D1019F0045923A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0AC56827D1019F0045923A /* LaunchScreen.storyboard */; };
 		AE10B20E27D6218C00BA9157 /* WordsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE10B20D27D6218C00BA9157 /* WordsViewModel.swift */; };
 		AE26711C27D8E68E00035EE0 /* TeamScoreboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE26711B27D8E68E00035EE0 /* TeamScoreboardView.swift */; };
+		AE26712027D90AAD00035EE0 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE26711F27D90AAD00035EE0 /* SettingsVC.swift */; };
 		AE3888E927D20F1E005D0A4C /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3888E827D20F1E005D0A4C /* WordModel.swift */; };
 		AE3888EB27D20F4A005D0A4C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3888EA27D20F4A005D0A4C /* Category.swift */; };
 		AE3888ED27D214D5005D0A4C /* WordRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3888EC27D214D5005D0A4C /* WordRepository.swift */; };
@@ -37,6 +38,7 @@
 		AE49A26E27D7A6A70049DDC4 /* timer_other.wav in Resources */ = {isa = PBXBuildFile; fileRef = AE49A26D27D7A6A70049DDC4 /* timer_other.wav */; };
 		AE49A27027D7A6EB0049DDC4 /* timer.wav in Resources */ = {isa = PBXBuildFile; fileRef = AE49A26F27D7A6EB0049DDC4 /* timer.wav */; };
 		AE9841CE27D7574500B2140A /* PlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9841CD27D7574500B2140A /* PlayVC.swift */; };
+		AECA840327D9F729009B5E92 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECA840227D9F729009B5E92 /* CategoryCell.swift */; };
 		AEEBC00D27D2562300270102 /* SizedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEBC00C27D2562300270102 /* SizedButton.swift */; };
 		AEEBC00F27D25A5C00270102 /* TurnStartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEBC00E27D25A5C00270102 /* TurnStartVC.swift */; };
 		AEEBC01127D266AC00270102 /* ScoreBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEBC01027D266AC00270102 /* ScoreBoardView.swift */; };
@@ -69,6 +71,7 @@
 		AE0AC56B27D1019F0045923A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE10B20D27D6218C00BA9157 /* WordsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsViewModel.swift; sourceTree = "<group>"; };
 		AE26711B27D8E68E00035EE0 /* TeamScoreboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamScoreboardView.swift; sourceTree = "<group>"; };
+		AE26711F27D90AAD00035EE0 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		AE3888E827D20F1E005D0A4C /* WordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
 		AE3888EA27D20F4A005D0A4C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		AE3888EC27D214D5005D0A4C /* WordRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordRepository.swift; sourceTree = "<group>"; };
@@ -85,6 +88,7 @@
 		AE49A26D27D7A6A70049DDC4 /* timer_other.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = timer_other.wav; sourceTree = "<group>"; };
 		AE49A26F27D7A6EB0049DDC4 /* timer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = timer.wav; sourceTree = "<group>"; };
 		AE9841CD27D7574500B2140A /* PlayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVC.swift; sourceTree = "<group>"; };
+		AECA840227D9F729009B5E92 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		AEEBC00C27D2562300270102 /* SizedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizedButton.swift; sourceTree = "<group>"; };
 		AEEBC00E27D25A5C00270102 /* TurnStartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnStartVC.swift; sourceTree = "<group>"; };
 		AEEBC01027D266AC00270102 /* ScoreBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardView.swift; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 				AEEBC00C27D2562300270102 /* SizedButton.swift */,
 				AE479DF127D8BE1A006BBB6E /* WordPlayedCell.swift */,
 				AE26711B27D8E68E00035EE0 /* TeamScoreboardView.swift */,
+				AECA840227D9F729009B5E92 /* CategoryCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 				AEEBC00E27D25A5C00270102 /* TurnStartVC.swift */,
 				AE0AC55E27D1019D0045923A /* WelcomeVC.swift */,
 				AE479DF527D8DC9F006BBB6E /* ScoreboardVC.swift */,
+				AE26711F27D90AAD00035EE0 /* SettingsVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -403,6 +409,7 @@
 				AE0AC56527D1019D0045923A /* OufMime_iOS.xcdatamodeld in Sources */,
 				AE3888E927D20F1E005D0A4C /* WordModel.swift in Sources */,
 				AE0AC55F27D1019D0045923A /* WelcomeVC.swift in Sources */,
+				AE26712027D90AAD00035EE0 /* SettingsVC.swift in Sources */,
 				AE0AC55B27D1019D0045923A /* AppDelegate.swift in Sources */,
 				AE479DF427D8CAC4006BBB6E /* TurnEndVC.swift in Sources */,
 				AEEBC01127D266AC00270102 /* ScoreBoardView.swift in Sources */,
@@ -410,6 +417,7 @@
 				AE479DF227D8BE1A006BBB6E /* WordPlayedCell.swift in Sources */,
 				AEEBC00D27D2562300270102 /* SizedButton.swift in Sources */,
 				AE3888ED27D214D5005D0A4C /* WordRepository.swift in Sources */,
+				AECA840327D9F729009B5E92 /* CategoryCell.swift in Sources */,
 				AE38890727D25284005D0A4C /* Storyboarded.swift in Sources */,
 				AE38890527D25235005D0A4C /* MainCoordinator.swift in Sources */,
 				AE3888EB27D20F4A005D0A4C /* Category.swift in Sources */,

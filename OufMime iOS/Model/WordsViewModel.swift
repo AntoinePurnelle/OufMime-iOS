@@ -31,10 +31,10 @@ struct WordsViewModel {
 
     public private(set) var currentWord: Word? = nil
 
-    var timerTotalTime: Double = 6
-    var timerCurrentTime: Double = 6
-    private var wordsCount = 10
-    private var categories = Dictionary(uniqueKeysWithValues: Category.allCases.map { ($0.rawValue, true) })
+    public private(set) var timerTotalTime: Double = 40
+    public var timerCurrentTime: Double = 40
+    public private(set) var wordsCount = 40
+    public var categories = Dictionary(uniqueKeysWithValues: Category.allCases.map { ($0.rawValue, true) })
     private var selectedCategories: [String] {
         mutating get {
             categories.filter { (_, isSelected) in
@@ -168,6 +168,11 @@ struct WordsViewModel {
         case 1: return #colorLiteral(red: 1, green: 0.4352941176, blue: 0, alpha: 0.67)
         default: return UIColor.white
         }
+    }
+    
+    mutating func editGamesSettings(withWordsCount wordsCount: Int, turnDuration seconds: Double) {
+        self.wordsCount = wordsCount
+        self.timerTotalTime = seconds
     }
 
     var primaryColor: UIColor {

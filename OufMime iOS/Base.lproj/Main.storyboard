@@ -72,6 +72,125 @@
             </objects>
             <point key="canvasLocation" x="141" y="139"/>
         </scene>
+        <!--SettingsVC-->
+        <scene sceneID="6j5-Qk-5AR">
+            <objects>
+                <viewController storyboardIdentifier="SettingsVC" id="rtJ-RQ-MYT" customClass="SettingsVC" customModule="OufMime_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B9V-3K-VWS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="40" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tDe-Iv-u8Z" userLabel="Words Count TF">
+                                <rect key="frame" x="147" y="80" width="120" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="qe5-UB-fXQ"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="40" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="46s-tq-ioO" userLabel="Minutes TF">
+                                <rect key="frame" x="147" y="150" width="120" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ox8-2w-bF5" customClass="SizedButton" customModule="OufMime_iOS" customModuleProvider="target">
+                                <rect key="frame" x="131" y="782" width="152" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="31w-IO-wlJ"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="JOUER !">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="32"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="playPressed:" destination="rtJ-RQ-MYT" eventType="touchUpInside" id="JTK-22-Inf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre de mots" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxj-nh-kjF">
+                                <rect key="frame" x="147" y="52" width="109" height="20"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Secondes par tour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WvM-w2-zFp">
+                                <rect key="frame" x="147" y="122" width="118" height="20"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="G1s-nG-nW3">
+                                <rect key="frame" x="20" y="204" width="374" height="558"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CategoryCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" id="HWe-dV-6du" customClass="CategoryCell" customModule="OufMime_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HWe-dV-6du" id="yMg-c8-prl">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hd4-mY-jYh">
+                                                    <rect key="frame" x="305" y="6.5" width="51" height="31"/>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opT-kC-qtx">
+                                                    <rect key="frame" x="20" y="12" width="59" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hd4-mY-jYh" firstAttribute="centerY" secondItem="yMg-c8-prl" secondAttribute="centerY" id="7Vs-Xb-VOY"/>
+                                                <constraint firstItem="opT-kC-qtx" firstAttribute="centerY" secondItem="yMg-c8-prl" secondAttribute="centerY" id="NWK-TL-Xa8"/>
+                                                <constraint firstAttribute="trailing" secondItem="hd4-mY-jYh" secondAttribute="trailing" constant="20" id="cFE-yC-kZ7"/>
+                                                <constraint firstItem="opT-kC-qtx" firstAttribute="leading" secondItem="yMg-c8-prl" secondAttribute="leadingMargin" id="mMe-f8-3h0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="categoryLbl" destination="opT-kC-qtx" id="2K9-It-fHf"/>
+                                            <outlet property="categorySwitch" destination="hd4-mY-jYh" id="AAw-GM-QqT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="N4P-jQ-hQk"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="N4P-jQ-hQk" firstAttribute="trailing" secondItem="G1s-nG-nW3" secondAttribute="trailing" constant="20" id="2Ue-SP-VTv"/>
+                            <constraint firstItem="G1s-nG-nW3" firstAttribute="top" secondItem="46s-tq-ioO" secondAttribute="bottom" constant="20" id="7JO-dR-q2F"/>
+                            <constraint firstItem="ox8-2w-bF5" firstAttribute="centerX" secondItem="B9V-3K-VWS" secondAttribute="centerX" id="7bL-e9-qYg"/>
+                            <constraint firstItem="ox8-2w-bF5" firstAttribute="top" secondItem="G1s-nG-nW3" secondAttribute="bottom" constant="20" id="EKM-HP-tRF"/>
+                            <constraint firstItem="WvM-w2-zFp" firstAttribute="top" secondItem="tDe-Iv-u8Z" secondAttribute="bottom" constant="8" id="Ovj-fe-iLd"/>
+                            <constraint firstItem="G1s-nG-nW3" firstAttribute="leading" secondItem="N4P-jQ-hQk" secondAttribute="leading" constant="20" id="SQS-IC-3mY"/>
+                            <constraint firstItem="N4P-jQ-hQk" firstAttribute="bottom" secondItem="ox8-2w-bF5" secondAttribute="bottom" constant="20" id="Tub-Op-10N"/>
+                            <constraint firstItem="46s-tq-ioO" firstAttribute="top" secondItem="WvM-w2-zFp" secondAttribute="bottom" constant="8" id="Vw1-Q2-R7u"/>
+                            <constraint firstItem="tDe-Iv-u8Z" firstAttribute="top" secondItem="Kxj-nh-kjF" secondAttribute="bottom" constant="8" id="WSH-v6-xYb"/>
+                            <constraint firstItem="Kxj-nh-kjF" firstAttribute="leading" secondItem="tDe-Iv-u8Z" secondAttribute="leading" id="WUW-sZ-aZv"/>
+                            <constraint firstItem="tDe-Iv-u8Z" firstAttribute="centerX" secondItem="B9V-3K-VWS" secondAttribute="centerX" id="ZVm-P7-KOw"/>
+                            <constraint firstItem="WvM-w2-zFp" firstAttribute="leading" secondItem="46s-tq-ioO" secondAttribute="leading" id="fzy-4A-oc5"/>
+                            <constraint firstItem="46s-tq-ioO" firstAttribute="width" secondItem="tDe-Iv-u8Z" secondAttribute="width" id="p0e-UR-dWJ"/>
+                            <constraint firstItem="Kxj-nh-kjF" firstAttribute="top" secondItem="N4P-jQ-hQk" secondAttribute="top" constant="8" id="ram-7M-rEf"/>
+                            <constraint firstItem="46s-tq-ioO" firstAttribute="centerX" secondItem="B9V-3K-VWS" secondAttribute="centerX" id="u5s-RW-gPn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="categoriesTbl" destination="G1s-nG-nW3" id="Oqg-UT-vvt"/>
+                        <outlet property="secondsTf" destination="46s-tq-ioO" id="chr-yY-C9S"/>
+                        <outlet property="wordsCountTf" destination="tDe-Iv-u8Z" id="hu1-WT-Gqa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OZ0-Zl-J3g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144.92753623188406" y="828.34821428571422"/>
+        </scene>
         <!--Turn StartVC-->
         <scene sceneID="7Qa-ra-OR0">
             <objects>
@@ -839,12 +958,15 @@
         <designable name="gz1-dw-K22">
             <size key="intrinsicContentSize" width="130" height="47"/>
         </designable>
+        <designable name="ox8-2w-bF5">
+            <size key="intrinsicContentSize" width="152" height="58"/>
+        </designable>
         <designable name="uRm-fP-9Oj">
             <size key="intrinsicContentSize" width="275" height="45"/>
         </designable>
     </designables>
     <resources>
-        <image name="ic_launcher" width="48" height="48"/>
+        <image name="ic_launcher" width="170.5" height="170.5"/>
         <image name="ic_no" width="100" height="100"/>
         <image name="ic_yes" width="100" height="100"/>
         <systemColor name="systemGrayColor">
