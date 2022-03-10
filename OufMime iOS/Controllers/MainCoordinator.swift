@@ -20,8 +20,13 @@ class MainCoordinator: Coordinator {
     func start() {
         navigate(to: WelcomeVC.instantiate())
     }
+    
+    func startSettings() {
+        navigate(to: SettingsVC.instantiate())
+    }
 
     func startGame() {
+        popToWelcome()
         viewModel.initGame {
             self.startRound()
         }
@@ -53,12 +58,16 @@ class MainCoordinator: Coordinator {
 
     func finishRound() {
         if viewModel.currentRound == 2 {
-            let welcomeVC = navigationController.viewControllers[0]
-            navigationController.popToViewController(welcomeVC, animated: true)
+            popToWelcome()
         } else {
             viewModel.finishRound()
             popToRoundStart()
         }
+    }
+    
+    func popToWelcome() {
+        let welcomeVC = navigationController.viewControllers[0]
+        navigationController.popToViewController(welcomeVC, animated: true)
     }
 
     func popToRoundStart() {

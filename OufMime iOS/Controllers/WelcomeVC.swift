@@ -19,6 +19,7 @@ class WelcomeVC: StoryboardedVC {
     
     
     @IBAction func settingsPressed(_ sender: Any) {
+        coordinator!.startSettings()
     }
     
 }
