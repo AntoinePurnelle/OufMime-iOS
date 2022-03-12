@@ -1,6 +1,6 @@
 # OufMime-iOS
 
-iOS app developped in Swift with UIKit as a learning project.
+iOS app developed in Swift with UIKit as a learning project.
 
 OufMime is a family game where two teams will try to guess the most words.
 It is played in three rounds:
