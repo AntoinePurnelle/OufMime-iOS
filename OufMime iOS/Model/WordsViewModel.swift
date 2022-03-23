@@ -49,154 +49,167 @@ struct WordsViewModel {
         repo = WordRepositoryImpl()
         insertWords()
     }
-
-    mutating func initGame(onCompleted: @escaping (() -> Void)) {
-        repo.fetchRandomWords(inCategories: selectedCategories, withCount: wordsCount) { words in
-            self.words = words
-            print("Selected Words: \(words)")
-
-            currentRound = 0
-            currentTeam = 0
-
-            teamWords = [
-                [[Word](), [Word](), [Word]()],
-                [[Word](), [Word](), [Word]()],
-            ]
-
-            DispatchQueue.main.async {
-                onCompleted()
-            }
-
-        } onError: { message in
-            debugPrint(message)
-        }
-    }
-
-    mutating func initRound() {
-        currentRoundFinished = false
-        wordsToPlay.removeAll()
-        wordsToPlay.append(contentsOf: words.shuffled())
-        wordsMissedInRound.removeAll()
-
-        print("Starting round \(currentRound) - Words to Play (\(wordsToPlay.count)): \(wordsToPlay)")
-    }
-
-    mutating func initTurn() {
-        wordsPlayedInTurn.removeAll()
-        currentWord = wordsToPlay.first
-        timerCurrentTime = timerTotalTime
-    }
-
-    mutating func playWord(wasFound: Bool, timerEnded: Bool) {
-        if hasMoreWords {
-            wordsPlayedInTurn.append((wordsToPlay.removeFirst(), wasFound))
-
-            debugPrint("Played word \(wordsPlayedInTurn.last!)")
-
-            if !timerEnded {
-                currentWord = wordsToPlay.first
-            }
-        }
-    }
-
-    mutating func finishTurn() {
-        let wordsFoundInTurn = wordsPlayedInTurn.filter { (word, found) in found }.map { (word, _) in word }
-        teamWords[currentTeam][currentRound].append(contentsOf: wordsFoundInTurn)
-
-        let wordsMissedInTurn = wordsPlayedInTurn.filter { (word, found) in !found }.map { (word, _) in word }
-        wordsToPlay.append(contentsOf: wordsMissedInTurn)
-        
-        currentTeam = currentTeam == 0 ? 1 : 0
-        
-        debugPrint("Turn finished and saved")
-    }
-    
-    mutating func finishRound() {
-        currentRound += 1
-        initRound()
-    }
-    
-    mutating func changeValueInPlayedWords(atRow index: Int) {
-        wordsPlayedInTurn[index].found = !wordsPlayedInTurn[index].found
-    }
-
-    func getScore(inRound round: Int, forTeam team: Int) -> Int {
-        return currentRound < round ? -1 : teamWords[team][round].count
-    }
-
-    func getCurrentRoundScore(forTeam team: Int) -> Int {
-        return getScore(inRound: currentRound, forTeam: team)
-    }
-
-    func getTotalScore(forTeam team: Int) -> Int {
-        return teamWords[team].reduce(0) { count, words in
-            count + words.count
-        }
-    }
-
-    var wordsFoundInTurnCount: Int {
-        get { wordsPlayedInTurn.filter { (_, found) in found }.count }
-    }
-
-    var wordsMissedInTurnCount: Int {
-        get { wordsPlayedInTurn.filter { (_, found) in !found }.count }
-    }
-
-    var hasMoreWords: Bool {
-        get { wordsToPlay.count > 0 }
-    }
-
-    var shouldInvertColors: Bool {
-        get { currentTeam == 0 }
-    }
-
-    var currentTeamName: String {
-        get { currentTeam == 0 ? "LES BLEUS" : "LES ORANGES" }
-    }
-
-    func getColor(forteam team: Int) -> UIColor {
-        switch (team) {
-        case 0: return #colorLiteral(red: 0, green: 0, blue: 0.3882352941, alpha: 1)
-        case 1: return #colorLiteral(red: 1, green: 0.4352941176, blue: 0, alpha: 1)
-        default: return UIColor.white
-        }
-    }
-
-    func getTransparentColor(forteam team: Int) -> UIColor {
-        switch (team) {
-        case 0: return #colorLiteral(red: 0, green: 0, blue: 0.3882352941, alpha: 0.67)
-        case 1: return #colorLiteral(red: 1, green: 0.4352941176, blue: 0, alpha: 0.67)
-        default: return UIColor.white
-        }
-    }
-    
-    mutating func editGamesSettings(withWordsCount wordsCount: Int, turnDuration seconds: Double) {
-        self.wordsCount = wordsCount
-        self.timerTotalTime = seconds
-    }
-
-    var primaryColor: UIColor {
-        get { getColor(forteam: currentTeam) }
-    }
-
-    var secondaryColor: UIColor {
-        get { getColor(forteam: currentTeam == 0 ? 1 : 0) }
-    }
-
-    var primaryTransparentColor: UIColor {
-        get { getTransparentColor(forteam: currentTeam) }
-    }
-
-    var secondaryTransparentColor: UIColor {
-        get { getTransparentColor(forteam: currentTeam == 0 ? 1 : 0) }
-    }
-
-    var appIconName: String {
-        get { shouldInvertColors ? "ic_launcher_inverted" : "ic_launcher" }
-    }
 }
 
+// Getters/Setters Extension
+extension WordsViewModel {
+  
+  var hasMoreWords: Bool {
+    get { wordsToPlay.count > 0 }
+  }
+  
+  var hasMoreRounds: Bool {
+    get { currentRound < 2 }
+  }
+  
+  func getScore(inRound round: Int, forTeam team: Int) -> Int {
+    return currentRound < round ? -1 : teamWords[team][round].count
+  }
+  
+  func getCurrentRoundScore(forTeam team: Int) -> Int {
+    return getScore(inRound: currentRound, forTeam: team)
+  }
+  
+  func getTotalScore(forTeam team: Int) -> Int {
+    return teamWords[team].reduce(0) { count, words in
+      count + words.count
+    }
+  }
+  
+  var wordsFoundInTurnCount: Int {
+    get { wordsPlayedInTurn.filter { (_, found) in found }.count }
+  }
+  
+  var wordsMissedInTurnCount: Int {
+    get { wordsPlayedInTurn.filter { (_, found) in !found }.count }
+  }
+  
+  mutating func editGamesSettings(withWordsCount wordsCount: Int, turnDuration seconds: Double) {
+    self.wordsCount = wordsCount
+    self.timerTotalTime = seconds
+  }
+  
+  mutating func changeValueInPlayedWords(atRow index: Int) {
+    wordsPlayedInTurn[index].found.toggle()
+  }
+  
+  var shouldInvertColors: Bool {
+    get { currentTeam == 0 }
+  }
+  
+  var currentTeamName: String {
+    get { currentTeam == 0 ? "LES BLEUS" : "LES ORANGES" }
+  }
+  
+  func getColor(forteam team: Int) -> UIColor {
+    switch (team) {
+    case 0: return #colorLiteral(red: 0, green: 0, blue: 0.3882352941, alpha: 1)
+    case 1: return #colorLiteral(red: 1, green: 0.4352941176, blue: 0, alpha: 1)
+    default: return UIColor.white
+    }
+  }
+  
+  func getTransparentColor(forteam team: Int) -> UIColor {
+    switch (team) {
+    case 0: return #colorLiteral(red: 0, green: 0, blue: 0.3882352941, alpha: 0.67)
+    case 1: return #colorLiteral(red: 1, green: 0.4352941176, blue: 0, alpha: 0.67)
+    default: return UIColor.white
+    }
+  }
+  
+  var primaryColor: UIColor {
+    get { getColor(forteam: currentTeam) }
+  }
+  
+  var secondaryColor: UIColor {
+    get { getColor(forteam: currentTeam == 0 ? 1 : 0) }
+  }
+  
+  var primaryTransparentColor: UIColor {
+    get { getTransparentColor(forteam: currentTeam) }
+  }
+  
+  var secondaryTransparentColor: UIColor {
+    get { getTransparentColor(forteam: currentTeam == 0 ? 1 : 0) }
+  }
+  
+  var appIconName: String {
+    get { shouldInvertColors ? "ic_launcher_inverted" : "ic_launcher" }
+  }
+  
+}
 
+// Game LifeCycle Extensions
+extension WordsViewModel {
+  
+  mutating func initGame(onCompleted: @escaping (() -> Void)) {
+    repo.fetchRandomWords(inCategories: selectedCategories, withCount: wordsCount) { words in
+      self.words = words
+      print("Selected Words: \(words)")
+      
+      currentRound = 0
+      currentTeam = 0
+      
+      teamWords = [
+        [[Word](), [Word](), [Word]()],
+        [[Word](), [Word](), [Word]()],
+      ]
+      
+      DispatchQueue.main.async {
+        onCompleted()
+      }
+      
+    } onError: { message in
+      debugPrint(message)
+    }
+  }
+  
+  mutating func initRound() {
+    currentRoundFinished = false
+    wordsToPlay.removeAll()
+    wordsToPlay.append(contentsOf: words.shuffled())
+    wordsMissedInRound.removeAll()
+    
+    print("Starting round \(currentRound) - Words to Play (\(wordsToPlay.count)): \(wordsToPlay)")
+  }
+  
+  mutating func initTurn() {
+    wordsPlayedInTurn.removeAll()
+    currentWord = wordsToPlay.first
+    timerCurrentTime = timerTotalTime
+  }
+  
+  mutating func playWord(wasFound: Bool, timerEnded: Bool = false) {
+    if hasMoreWords {
+      wordsPlayedInTurn.append((wordsToPlay.removeFirst(), wasFound))
+      
+      debugPrint("Played word \(wordsPlayedInTurn.last!)")
+      
+      if !timerEnded {
+        currentWord = wordsToPlay.first
+      }
+    }
+  }
+  
+  mutating func finishTurn() {
+    let wordsFoundInTurn = wordsPlayedInTurn.filter { (word, found) in found }.map { (word, _) in word }
+    teamWords[currentTeam][currentRound].append(contentsOf: wordsFoundInTurn)
+    
+    let wordsMissedInTurn = wordsPlayedInTurn.filter { (word, found) in !found }.map { (word, _) in word }
+    wordsToPlay.append(contentsOf: wordsMissedInTurn)
+    
+    currentTeam = currentTeam == 0 ? 1 : 0
+    
+    debugPrint("Turn finished and saved")
+  }
+  
+  mutating func finishRound() {
+    currentRound += 1
+    initRound()
+  }
+}
+
+// DB Extensions
 extension WordsViewModel {
 
     private var wordsListVersion: Int {

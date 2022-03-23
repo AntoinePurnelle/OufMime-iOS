@@ -26,7 +26,7 @@ class ScoreboardVC: StoryboardedVC {
             blueLbls[3].text = String(vm.getTotalScore(forTeam: 0))
             orangeLbls[3].text = String(vm.getTotalScore(forTeam: 1))
             
-            if vm.currentRound == 2 {
+            if !vm.hasMoreRounds {
                 nextBtn.setTitle("NOUVELLE PARTIE", for: .normal)
             }
         }

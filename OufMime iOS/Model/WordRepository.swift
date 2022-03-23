@@ -6,7 +6,7 @@
 //
 
 import CoreData
-import UIKit
+import Foundation
 
 typealias OnCompleted = () -> Void
 typealias OnCompletedWord = (_ word: Word) -> Void

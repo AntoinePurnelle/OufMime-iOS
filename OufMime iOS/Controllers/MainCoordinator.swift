@@ -57,11 +57,11 @@ class MainCoordinator: Coordinator {
     }
 
     func finishRound() {
-        if viewModel.currentRound == 2 {
-            popToWelcome()
+        if viewModel.hasMoreRounds {
+          viewModel.finishRound()
+          popToRoundStart()
         } else {
-            viewModel.finishRound()
-            popToRoundStart()
+          popToWelcome()
         }
     }
     
