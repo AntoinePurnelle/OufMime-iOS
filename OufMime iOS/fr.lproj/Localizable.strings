@@ -1,0 +1,38 @@
+/* 
+  Localizable.strings
+  OufMime iOS
+
+  Created by Antoine Purnelle on 25/03/2022.
+  
+*/
+
+"describe" = "Décrire !";
+"word" = "Un mot !";
+"mime" = "Mimer !";
+
+"start" = "Jouez !";
+"round" = "Manche %@ :";
+
+"team_blue" = "Les Bleus";
+"team_orange" = "Les Oranges";
+
+"new_game" = "Nouvelle partie !";
+"next_round" = "Manche suivante !";
+
+"actions" = "Actions";
+"activities" = "Sports - Hobbies - Jeux";
+"anatomy" = "Anatomie";
+"animals" = "Animaux";
+"celebrities" = "Personnages célèbres ou historiques";
+"clothes" = "Habits";
+"events" = "Évènements";
+"fictional" = "Personage ou créature fictif";
+"food" = "Nourriture";
+"geek" = "Geek";
+"jobs" = "Métiers";
+"locations" = "Lieux";
+"mythology" = "Mythologie";
+"nature" = "Nature";
+"objects" = "Objets";
+"vehicles" = "Véhicules";
+

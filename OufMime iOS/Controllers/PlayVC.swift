@@ -42,7 +42,7 @@ class PlayVC: StoryboardedVC {
     let vm = coordinator!.viewModel
 
     wordLbl.text = vm.currentWord?.word
-    categoryLbl.text = vm.currentWord?.category.rawValue
+    categoryLbl.text = vm.currentWord?.category.rawValue~
 
     foundLbl.text = String(vm.wordsFoundInTurnCount)
     missedLbl.text = String(vm.wordsMissedInTurnCount)

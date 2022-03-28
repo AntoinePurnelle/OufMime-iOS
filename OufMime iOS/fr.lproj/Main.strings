@@ -1,0 +1,150 @@
+
+/* Class = "UILabel"; text = "Les Bleus"; ObjectID = "1L4-Oc-Ntd"; */
+"1L4-Oc-Ntd.text" = "Les Bleus";
+
+/* Class = "UIButton"; normalTitle = "MANCHE SUIVANTE"; ObjectID = "1pF-px-OvX"; */
+"1pF-px-OvX.normalTitle" = "MANCHE SUIVANTE";
+
+/* Class = "UILabel"; text = "Word"; ObjectID = "2L8-zX-FEI"; */
+"2L8-zX-FEI.text" = "Word";
+
+/* Class = "UILabel"; text = "Mimer"; ObjectID = "3U5-ZI-gRg"; */
+"3U5-ZI-gRg.text" = "Mimer";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "3xf-Sh-GZ1"; */
+"3xf-Sh-GZ1.text" = "0";
+
+/* Class = "UITextField"; text = "40"; ObjectID = "46s-tq-ioO"; */
+"46s-tq-ioO.text" = "40";
+
+/* Class = "UILabel"; text = "Décrire"; ObjectID = "5g8-oP-WtW"; */
+"5g8-oP-WtW.text" = "Décrire";
+
+/* Class = "UILabel"; text = "Les Oranges"; ObjectID = "7b1-5N-kSb"; */
+"7b1-5N-kSb.text" = "Les Oranges";
+
+/* Class = "UILabel"; text = "Manche"; ObjectID = "7qD-cG-NmN"; */
+"7qD-cG-NmN.text" = "Manche";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "AI2-LM-9ua"; */
+"AI2-LM-9ua.text" = "0";
+
+/* Class = "UILabel"; text = "Category"; ObjectID = "BBz-HK-TsM"; */
+"BBz-HK-TsM.text" = "Category";
+
+/* Class = "UILabel"; text = "Total"; ObjectID = "BhN-oO-eed"; */
+"BhN-oO-eed.text" = "Total";
+
+/* Class = "UILabel"; text = "Manche 1 : "; ObjectID = "BpY-WY-fOk"; */
+"BpY-WY-fOk.text" = "Manche 1 : ";
+
+/* Class = "UILabel"; text = "Décrire !"; ObjectID = "CU8-pW-Ah9"; */
+"CU8-pW-Ah9.text" = "Décrire !";
+
+/* Class = "UILabel"; text = "Un mot"; ObjectID = "Dsr-iC-Nwc"; */
+"Dsr-iC-Nwc.text" = "Un mot";
+
+/* Class = "UIButton"; normalTitle = "JOUER !"; ObjectID = "ENo-P4-nKb"; */
+"ENo-P4-nKb.normalTitle" = "JOUER !";
+
+/* Class = "UILabel"; text = "Manche"; ObjectID = "JgV-J1-8R3"; */
+"JgV-J1-8R3.text" = "Manche";
+
+/* Class = "UILabel"; text = "Nombre de mots"; ObjectID = "Kxj-nh-kjF"; */
+"Kxj-nh-kjF.text" = "Nombre de mots";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "MR8-mH-nQj"; */
+"MR8-mH-nQj.text" = "0";
+
+/* Class = "UILabel"; text = "Manqués"; ObjectID = "MSv-SP-3Sa"; */
+"MSv-SP-3Sa.text" = "Manqués";
+
+/* Class = "UIButton"; normalTitle = "Paramètres"; ObjectID = "NhQ-qj-h41"; */
+"NhQ-qj-h41.normalTitle" = "Paramètres";
+
+/* Class = "UILabel"; text = "--"; ObjectID = "O9H-a7-tRm"; */
+"O9H-a7-tRm.text" = "--";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "S2U-at-cX8"; */
+"S2U-at-cX8.text" = "0";
+
+/* Class = "UILabel"; text = "Secondes par tour"; ObjectID = "WvM-w2-zFp"; */
+"WvM-w2-zFp.text" = "Secondes par tour";
+
+/* Class = "UILabel"; text = "OufMime!"; ObjectID = "XFk-SN-Qnl"; */
+"XFk-SN-Qnl.text" = "OufMime!";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "ZML-eu-Lt8"; */
+"ZML-eu-Lt8.text" = "0";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "ZYD-7n-Z8r"; */
+"ZYD-7n-Z8r.text" = "0";
+
+/* Class = "UILabel"; text = "Décrire"; ObjectID = "d7y-1Z-otd"; */
+"d7y-1Z-otd.text" = "Décrire";
+
+/* Class = "UILabel"; text = "Trouvés"; ObjectID = "fVu-Iu-f11"; */
+"fVu-Iu-f11.text" = "Trouvés";
+
+/* Class = "UILabel"; text = "Un mot"; ObjectID = "foc-CF-BIT"; */
+"foc-CF-BIT.text" = "Un mot";
+
+/* Class = "UILabel"; text = "--"; ObjectID = "grR-ls-vn9"; */
+"grR-ls-vn9.text" = "--";
+
+/* Class = "UILabel"; text = "--"; ObjectID = "gvR-lI-KbT"; */
+"gvR-lI-KbT.text" = "--";
+
+/* Class = "UIButton"; normalTitle = "SUIVANT"; ObjectID = "gz1-dw-K22"; */
+"gz1-dw-K22.normalTitle" = "SUIVANT";
+
+/* Class = "UILabel"; text = "--"; ObjectID = "mu7-16-3e7"; */
+"mu7-16-3e7.text" = "--";
+
+/* Class = "UILabel"; text = "Category"; ObjectID = "opT-kC-qtx"; */
+"opT-kC-qtx.text" = "Category";
+
+/* Class = "UIButton"; configuration.title = "JOUER !"; ObjectID = "ox8-2w-bF5"; */
+"ox8-2w-bF5.configuration.title" = "JOUER !";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ox8-2w-bF5"; */
+"ox8-2w-bF5.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "qOu-xO-e2j"; */
+"qOu-xO-e2j.text" = "0";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "qWz-Mj-nM9"; */
+"qWz-Mj-nM9.text" = "0";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "r6C-A4-c0K"; */
+"r6C-A4-c0K.text" = "0";
+
+/* Class = "UITextField"; text = "40"; ObjectID = "tDe-Iv-u8Z"; */
+"tDe-Iv-u8Z.text" = "40";
+
+/* Class = "UILabel"; text = "Word  Word  Word  Word  Word  Word  Word  Word  "; ObjectID = "uEb-di-DWd"; */
+"uEb-di-DWd.text" = "Word  Word  Word  Word  Word  Word  Word  Word  ";
+
+/* Class = "UIButton"; normalTitle = "LES ORANGES, JOUEZ !"; ObjectID = "uRm-fP-9Oj"; */
+"uRm-fP-9Oj.normalTitle" = "LES ORANGES, JOUEZ !";
+
+/* Class = "UILabel"; text = "Mimer"; ObjectID = "vqf-CV-BUP"; */
+"vqf-CV-BUP.text" = "Mimer";
+
+/* Class = "UILabel"; text = "Trouvés"; ObjectID = "vqr-CL-rab"; */
+"vqr-CL-rab.text" = "Trouvés";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "wXY-OY-tiM"; */
+"wXY-OY-tiM.text" = "0";
+
+/* Class = "UILabel"; text = "Total"; ObjectID = "wzI-Ub-vWQ"; */
+"wzI-Ub-vWQ.text" = "Total";
+
+/* Class = "UILabel"; text = "Manqués"; ObjectID = "xJa-iV-0K5"; */
+"xJa-iV-0K5.text" = "Manqués";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "yTv-ho-7ti"; */
+"yTv-ho-7ti.text" = "0";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "ygp-tl-0Jn"; */
+"ygp-tl-0Jn.text" = "0";

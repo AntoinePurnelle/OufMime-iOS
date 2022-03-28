@@ -41,18 +41,18 @@ class TurnStartVC: StoryboardedVC {
             orangeRoundScoreLbl.text = String(vm.getCurrentRoundScore(forTeam: 1))
 
             let round = vm.currentRound
-            roundNumberLbl.text = "Manche \(round + 1) :"
+            roundNumberLbl.text = String(format: "round"~, String(round+1))
 
             switch (round) {
             case 0:
-                roundNameLbl.text = "Décrire !"
+                roundNameLbl.text = "describe"~
             case 1:
-                roundNameLbl.text = "Un mot !"
+                roundNameLbl.text = "word"~
             default:
-                roundNameLbl.text = "Mimer !"
+                roundNameLbl.text = "mime"~
             }
 
-            playBtn.setTitle("\(vm.currentTeamName), JOUEZ !", for: .normal)
+          playBtn.setTitle("\(vm.currentTeamName), \("start"~)".uppercased(), for: .normal)
         }
     }
 

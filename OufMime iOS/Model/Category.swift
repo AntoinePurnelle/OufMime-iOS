@@ -8,22 +8,22 @@
 import Foundation
 
 enum Category: String, Codable, CaseIterable {
-    
-    case actions = "Actions"
-    case activities = "Sports - Hobbies - Jeux"
-    case anatomy = "Anatomie"
-    case animals = "Animaux"
-    case celebrities = "Personnages célèbres"
-    case clothes = "Habits"
-    case events = "Évènements"
-    case fictional = "Personage ou créature fictif"
-    case food = "Nourriture"
-    case geek = "Geek"
-    case jobs = "Métiers"
-    case locations = "Lieux"
-    case mythology = "Mythologie"
-    case nature = "Nature"
-    case objects = "Objets"
-    case vehicles = "Véhicules"
-
+  
+  case actions = "actions"
+  case activities = "activities"
+  case anatomy = "anatomy"
+  case animals = "animals"
+  case celebrities = "celebrities"
+  case clothes = "clothes"
+  case events = "events"
+  case fictional = "fictional"
+  case food = "food"
+  case geek = "geek"
+  case jobs = "jobs"
+  case locations = "locations"
+  case mythology = "mythology"
+  case nature = "nature"
+  case objects = "objects"
+  case vehicles = "vehicles"
+  
 }
